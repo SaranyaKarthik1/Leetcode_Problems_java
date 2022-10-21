@@ -1,0 +1,14 @@
+//The Math. sqrt() method returns the square root of a number.
+  //floor will return integer value. If x=3.5 then both function will return 3 in output.
+       
+class Solution {
+    public int mySqrt(int x) {
+     
+x=(int)Math.sqrt(x);
+int res = (int)Math.floor(x);
+           
+return res;
+}
+} 
+
+//Cast to int is a function to convert variable of any datatype to integer type
