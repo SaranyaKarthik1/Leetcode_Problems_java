@@ -1,0 +1,42 @@
+//Excel sheet-A to z:1->26
+//Z -> 26
+//AA -> 27
+//AB -> 28 
+
+
+
+class Solution {
+    public String convertToTitle(int columnNumber) {
+        String ans="";
+        while(columnNumber>0){
+            int rem=columnNumber%26;
+            if(rem==0){
+                ans="Z"+ans;
+                columnNumber=columnNumber/26-1;
+            }
+            else{
+                char c=(char)('A'+rem-1);
+                columnNumber/=26;
+                ans=c+ans;
+            }
+            }
+        return ans;
+        
+    }
+}
+
+
+
+//Example 1:
+
+//Input: columnNumber = 1
+//Output: "A"
+//Example 2:
+
+//Input: columnNumber = 28
+//Output: "AB"
+//Example 3:
+
+//Input: columnNumber = 701
+//Output: "ZY"
+ 
