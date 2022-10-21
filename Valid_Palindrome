@@ -1,0 +1,46 @@
+//https://leetcode.com/problems/valid-palindrome/
+//The characters read the same backward as forward.//Some Examples are:level, rotor, kayak, reviver, racecar, madam:
+
+class Solution {
+   public boolean isPalindrome(String s) {
+    s= s.toLowerCase();// change the string to lowercase.
+        String answer = "";
+        //The string contains only a-z and 0-9
+        for(int i=0;i<s.length();i++){
+            if((s.charAt(i)>='a'&&s.charAt(i)<='z')||(s.charAt(i)>='0'&&s.charAt(i)<='9')){
+                answer+=s.charAt(i);
+            }
+        }
+        
+        //Two pointers for checking palindrome.
+        int start = 0,end=answer.length()-1;
+        while(start<=end){
+            if(answer.charAt(start)==answer.charAt(end)){
+                start++;
+                end--;
+            }
+            else{
+                return false;
+            }
+        } 
+    
+}
+
+
+
+//A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+//Given a string s, return true if it is a palindrome, or false otherwise
+
+//Example 1:
+
+//Input: s = "A man, a plan, a canal: Panama"
+//Output: true
+//Explanation: "amanaplanacanalpanama" is a palindrome.
+//Example 2:
+
+//Input: s = "race a car"
+//Output: false
+//Explanation: "raceacar" is not a palindrome.
+
+
