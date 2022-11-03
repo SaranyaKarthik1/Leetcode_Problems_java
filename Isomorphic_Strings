@@ -1,0 +1,40 @@
+class Solution {
+    public boolean isIsomorphic(String s, String t) {
+        if(s.length()!=t.length()){
+            return false;
+        }
+        Map<Character,Character> map=new HashMap<>();
+        for(int i=0;i<s.length();i++){
+            char one=s.charAt(i);
+            char two=t.charAt(i);
+            if(map.containsKey(one)){
+                if(map.get(one).equals(two)){
+                    continue;
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                if(!map.containsValue(two)){
+                    map.put(one,two);
+                    
+                }
+                else {
+                    return false;
+                }
+                }
+            }
+            return true;
+        }
+    }
+    /*
+Example 1:
+
+Input: s = "egg", t = "add"
+Output: true
+Example 2:
+
+Input: s = "foo", t = "bar"
+Output: false
+*/
