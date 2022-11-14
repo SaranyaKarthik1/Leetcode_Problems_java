@@ -1,0 +1,23 @@
+package DailyPrograms;
+
+public class ValidParenthesis {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s="()";
+		System.out.println(isValid(s));
+	 
+	    
+	   
+	}
+	public static boolean isValid(String s) {
+        while (s.indexOf("{}") !=-1 || s.indexOf("[]") !=-1 || s.indexOf("()") !=-1 ){
+    s=s.replace("()","");
+    s=s.replace("[]","");
+    s=s.replace("{}","");
+    
+}
+return s.isEmpty();
+	}
+}
