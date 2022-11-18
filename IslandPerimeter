@@ -7,6 +7,7 @@ class Solution {
             for(int j=0;j<n;j++){
                 if(grid[i][j]==1){
                     p=p+4;
+                
                     if(j>0 && grid[i][j-1]==1){
                         p+=-1;
                     }
@@ -21,7 +22,13 @@ class Solution {
                     }
                 }
             }
-       
+    
         }
+        
+        return p;
     }
 }
+
+//check connection to the left -1st condition
+//check connection up 
+//check connection to the right
